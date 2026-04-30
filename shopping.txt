@@ -1,2 +1,1 @@
-Shopping Item: & c:/Users/Administrator/AppData/Local/Programs/Python/Python315/python.exe c:/Users/Administrator/Documents/GitHub/Python-file-handling/push.pyShopping Item: bag
-Shopping Item: yes
+Shopping Item: Shopping Item: bag
