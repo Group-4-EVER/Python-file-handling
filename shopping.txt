@@ -1,1 +1,2 @@
-Shopping Item: Milk
+Shopping Item: mangoShopping Item: Lemon
+Shopping Item: Orange
