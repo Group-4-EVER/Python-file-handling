@@ -80,6 +80,31 @@ def search_item():
 
     except FileNotFoundError:
         print("Shopping list file not found.")
+
+# Delete Functionality
+def delete_item():
+    delete = input("Enter item to delete: ")
+
+    try:
+        with open("shopping.txt", "r") as file:
+            items = file.readlines()
+
+        found = False
+
+        with open("shopping.txt", "w") as file:
+            for item in items:
+                if delete.lower() not in item.lower():
+                    file.write(item)
+                else:
+                    found = True
+
+        if found:
+            print("Item deleted successfully.")
+        else:
+            print("Item not found.")
+
+    except FileNotFoundError:
+        print("Shopping list file not found.")
         
 # Student B - append(a) mode
 
@@ -90,7 +115,8 @@ while True:
     print("2. Read Items")
     print("3. Update Item")
     print("4. Search Item")
-    print("5. Exit")
+    print("5. Delete Item")
+    print("6. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -112,6 +138,9 @@ while True:
         search_item()
 
     elif choice == "5":
+        delete_item()
+
+    elif choice == "6":
         print("Exiting program...")
         break
 
