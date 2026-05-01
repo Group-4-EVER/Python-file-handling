@@ -60,6 +60,27 @@ def update_item():
     except FileNotFoundError:
         print("Shopping list file not found.")
         
+# Search Functionality
+def search_item():
+    search = input("Enter item to search: ")
+
+    try:
+        with open("shopping.txt", "r") as file:
+            items = file.readlines()
+
+            found = False
+
+            for item in items:
+                if search.lower() in item.lower():
+                    print("Item found:", item.strip())
+                    found = True
+
+            if not found:
+                print("Item not found.")
+
+    except FileNotFoundError:
+        print("Shopping list file not found.")
+        
 # Student B - append(a) mode
 
 print("\n--- Shopping List Manager ---")
