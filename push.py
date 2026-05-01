@@ -89,18 +89,18 @@ while True:
     print("\n1. Add New Item")
     print("2. Read Items")
     print("3. Update Item")
-    print("4. Exit")
+    print("4. Search Item")
+    print("5. Exit")
 
     choice = input("Enter your choice: ")
 
-    # Append mode
     if choice == "1":
         item = input("Enter shopping item: ")
 
         with open("shopping.txt", "a") as file:
             file.write("Shopping Item: " + item + "\n")
 
-        print(f"Successfully added {item} to the list.")
+        print("Successfully added item.")
 
     elif choice == "2":
         read_shopping_list("shopping.txt")
@@ -109,8 +109,11 @@ while True:
         update_item()
 
     elif choice == "4":
+        search_item()
+
+    elif choice == "5":
         print("Exiting program...")
         break
 
     else:
-        print("Invalid input. Please try again.")  
+        print("Invalid input. Try again.")
